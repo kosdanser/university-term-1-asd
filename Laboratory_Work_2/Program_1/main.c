@@ -5,7 +5,7 @@ int main(void)
 {
     int n;
     double S = 0;
-    int count = 2;
+    int counter = 0;
 
     printf("Enter number: ");
     scanf("%d", &n);
@@ -16,12 +16,12 @@ int main(void)
         for (int j = 1; j <= i; j++)
         {
             P *= sin(j);
-            count += 4;
+            counter += 4;
         }
         S += (sin(i) + 2) / (i + P);
-        count += 8;
+        counter += 8;
     }
 
     printf("S = %.7lf\n", S);
-    printf("The number of operations = %d\n", count);
+    printf("The number of operations = %d\n", counter);
 }
